@@ -21,7 +21,7 @@ const options = {
 
 export const fetchLocations = createAsyncThunk('location/fetchLocations', async () => {
   const response = await axios.request(options);
-  return response.data;
+  return response.data.data;
 });
 
 export const locationSlice = createSlice({
