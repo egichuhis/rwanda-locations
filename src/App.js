@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import TestComponent from './components/TestComponent';
+import Header from './components/Layout/Header';
+import Provinces from './components/Provinces';
+import Districts from './components/Districts';
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route path="/test" element={<TestComponent />} />
+        <Route path="/" element={<Provinces />} />
+        <Route path="/districts" element={<Districts />} />
       </Routes>
     </BrowserRouter>
   );
