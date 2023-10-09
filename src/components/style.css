@@ -1,0 +1,9 @@
+.header-text {
+  font-size: 15px;
+  background: #34548b;
+  color: var(--bs-body-bg);
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 0;
+}
