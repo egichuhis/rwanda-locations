@@ -9,7 +9,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space Travelers' Hub ](#-space-travelers-hub-)
+- [📖 Rwanda Locations ](#-rwanda-locations-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,9 +29,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space Travelers' Hub <a name="about-project"></a>
+# 📖 Rwanda Locations <a name="about-project"></a>
 
-**Space Travelers' Hub** is a book app where you can add books, read and track read progress.
+**Rwanda Locations** app helps you see Rwanda's locations from Provinces, Distrcits to Villages.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,8 +55,6 @@
 ### Key Features <a name="key-features"></a>
 
 - **Nav Bar**
-- **Fetch Rockets & Display**
-- **Book and Cancel Rocket**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,7 +64,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://space-travelers-mxyp.onrender.com/)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,7 +95,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/egichuhis/space-travelers-hub.git
+  git clone https://github.com/egichuhis/rwanda-locations.git
 ```
 
 ### Install
@@ -143,14 +141,9 @@ Example command:
 - Twitter: [@twitterhandle](https://twitter.com/egichuhis)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/edwin-gichuhi/)
 
-👤 **Eric Mawudeku**
-
-- GitHub: [@githubhandle](https://github.com/erickma1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/eric-mawudeku-55b74883/)
-
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Save rockets and missions state to API**
+- [ ] **Fetch Provinces and Display**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +153,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/egichuhis/space-travelers-hub/issues).
+Feel free to check the [issues page](https://github.com/egichuhis/rwanda-locations/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
