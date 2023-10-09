@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DarkMap from '../../imgs/map_dark.png';
 
-const Header = () => (
+const Header = ({ numOfProvinces, typeOfLocation }) => (
   <div className="card" style={{ background: '#5688e4', borderRadius: 0 }}>
     <div className="card-body">
       <div className="container">
@@ -11,13 +12,20 @@ const Header = () => (
           </div>
           <div className="col-6 col-md-6 align-self-center">
             <h4 style={{ fontWeight: 'bold' }}>RWANDA</h4>
-            <h4>5 Provinces</h4>
+            <h4>
+              {`${numOfProvinces} ${typeOfLocation}`}
+              {' '}
+            </h4>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 );
+
+Header.propTypes = {
+  numOfProvinces: PropTypes.string.isRequired,
+  typeOfLocation: PropTypes.string.isRequired,
+};
 
 export default Header;
