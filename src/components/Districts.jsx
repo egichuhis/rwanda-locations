@@ -5,7 +5,9 @@ import DistrictCard from './DistrictCard';
 import Header from './Layout/Header';
 
 const Districts = () => {
-  const { districts, loading, error } = useSelector((state) => state.location);
+  const {
+    districts, region, loading, error,
+  } = useSelector((state) => state.location);
   const location = useLocation();
 
   const isDistrictsPage = location.pathname === '/districts';
@@ -27,7 +29,7 @@ const Districts = () => {
     <div>
       {isDistrictsPage && (
         <>
-          <Header numOfLocations={districts.length} typeOfLocation="Districts" />
+          <Header numOfLocations={districts.length} typeOfLocation="Districts" region={region} />
           <h1 style={{
             fontSize: 15,
             background: '#34548b',

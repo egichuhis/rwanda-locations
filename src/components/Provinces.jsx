@@ -30,7 +30,7 @@ const Provinces = () => {
 
   return (
     <div>
-      <Header numOfLocations={locations.length} typeOfLocation="Provinces" />
+      <Header numOfLocations={locations.length} typeOfLocation="Provinces" region="Rwanda" />
       <h1
         style={{
           fontSize: 15,
