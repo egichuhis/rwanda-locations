@@ -54,7 +54,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Nav Bar**
+- **Fetch Provinces and Display**
+- **Fetch Districts for particular Province and Display**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +144,8 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Fetch Provinces and Display**
+- [ ] **Tests using Jest and React Testing Framework**
+- [ ] **Deployment**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
