@@ -1,13 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import ProvinceCard from './ProvinceCard';
 import Header from './Layout/Header';
+import { fetchDistricts } from '../redux/features/location/locationSlice';
 
 const Provinces = () => {
   const { locations, loading, error } = useSelector((state) => state.location);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleCardClick = (region) => {
-    console.log(`Card for ${region} clicked`);
+  const handleCardClick = async (region) => {
+    dispatch(fetchDistricts(region));
+    navigate('/districts');
   };
 
   if (loading) {
@@ -25,7 +30,7 @@ const Provinces = () => {
 
   return (
     <div>
-      <Header numOfProvinces={locations.length} typeOfLocation="Provinces" />
+      <Header numOfLocations={locations.length} typeOfLocation="Provinces" />
       <h1
         style={{
           fontSize: 15,

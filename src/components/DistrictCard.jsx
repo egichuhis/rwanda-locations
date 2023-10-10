@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const DistrictCard = () => (
+const DistrictCard = ({ district }) => (
   <div className="col-12" style={{ paddingTop: 5, paddingBottom: 5 }}>
     <div className="card" style={{ background: '#3f62a3', borderRadius: 0 }}>
       <div className="card-body">
@@ -13,8 +14,7 @@ const DistrictCard = () => (
               className="col-12 col-md-6 d-flex flex-row justify-content-between align-items-center"
               style={{ textAlign: 'right' }}
             >
-              <h4 style={{ fontWeight: 'bold', fontSize: 18 }}>Gasabo</h4>
-              <h4 style={{ fontSize: 16 }}>3 Cells</h4>
+              <h4 style={{ fontWeight: 'bold', fontSize: 18 }}>{district}</h4>
               <i
                 className="far fa-arrow-alt-circle-right d-flex align-self-start"
                 style={{
@@ -32,5 +32,9 @@ const DistrictCard = () => (
     </div>
   </div>
 );
+
+DistrictCard.propTypes = {
+  district: PropTypes.string.isRequired,
+};
 
 export default DistrictCard;

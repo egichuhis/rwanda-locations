@@ -4,13 +4,14 @@ import axios from 'axios';
 const initialState = {
   loading: false,
   locations: [],
+  districts: [],
   error: '',
 };
 
 const rapidApiKey = '591fdc8e79mshee79e5982913705p1921b9jsnf2f12ca11828';
 const rapidApiHost = 'rwanda.p.rapidapi.com';
 
-const options = {
+const regionsOptions = {
   method: 'GET',
   url: 'https://rwanda.p.rapidapi.com/',
   headers: {
@@ -20,8 +21,23 @@ const options = {
 };
 
 export const fetchLocations = createAsyncThunk('location/fetchLocations', async () => {
-  const response = await axios.request(options);
+  const response = await axios.request(regionsOptions);
   return response.data.data;
+});
+
+export const fetchDistricts = createAsyncThunk('districts/fetchDistricts', async (region) => {
+  const districtsOptions = {
+    method: 'GET',
+    url: 'https://rwanda.p.rapidapi.com/districts',
+    params: { p: region },
+    headers: {
+      'X-RapidAPI-Key': rapidApiKey,
+      'X-RapidAPI-Host': rapidApiHost,
+    },
+  };
+
+  const response = await axios.request(districtsOptions);
+  return response.data;
 });
 
 export const locationSlice = createSlice({
@@ -40,6 +56,19 @@ export const locationSlice = createSlice({
     builder.addCase(fetchLocations.rejected, (state, action) => {
       state.loading = false;
       state.locations = [];
+      state.error = action.error.message;
+    });
+    builder.addCase(fetchDistricts.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchDistricts.fulfilled, (state, action) => {
+      state.loading = false;
+      state.districts = action.payload.data;
+      state.error = '';
+    });
+    builder.addCase(fetchDistricts.rejected, (state, action) => {
+      state.loading = false;
+      state.districts = [];
       state.error = action.error.message;
     });
   },
