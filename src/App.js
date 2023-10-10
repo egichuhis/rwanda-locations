@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Provinces />} />
-        <Route path="/districts" element={<Districts />} />
+        <Route path="/districts/:region" element={<Districts />} />
       </Routes>
     </BrowserRouter>
   );

@@ -12,7 +12,7 @@ const Provinces = () => {
 
   const handleCardClick = async (region) => {
     dispatch(fetchDistricts(region));
-    navigate('/districts');
+    navigate(`/districts/${region}`);
   };
 
   if (loading) {

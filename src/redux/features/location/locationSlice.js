@@ -5,7 +5,6 @@ const initialState = {
   loading: false,
   locations: [],
   districts: [],
-  region: '',
   error: '',
 };
 
@@ -65,7 +64,6 @@ export const locationSlice = createSlice({
     builder.addCase(fetchDistricts.fulfilled, (state, action) => {
       state.loading = false;
       state.districts = action.payload.data;
-      state.region = action.payload.message;
       state.error = '';
     });
     builder.addCase(fetchDistricts.rejected, (state, action) => {
