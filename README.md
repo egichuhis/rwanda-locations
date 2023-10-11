@@ -14,6 +14,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Website ](#-live-website-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -59,11 +60,19 @@
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- LIVE WEBSITE -->
 
 ## 🚀 Live Website <a name="live-website"></a>
 
 - [Live Website Link](https://rwanda-locations.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://www.loom.com/share/9b32188d38bb4ef5877aefb65d68bea8?sid=10c8fe83-01e3-4089-ba00-0f478961e2da)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,8 +151,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Tests using Jest and React Testing Framework**
-- [ ] **Deployment**
+- [ ] **Desktop version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
