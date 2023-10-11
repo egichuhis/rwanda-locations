@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ProvinceCard from './ProvinceCard';
-import Header from './Layout/Header';
-import { fetchDistricts } from '../redux/features/location/locationSlice';
+import Header from '../Layout/Header';
+import { fetchDistricts } from '../../redux/features/location/locationSlice';
 
 const bgColor = { background: '#3f62a3' };
 

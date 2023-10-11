@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import DistrictCard from './DistrictCard';
-import Header from './Layout/Header';
+import Header from '../Layout/Header';
 
 const bgColor = { background: '#3f62a3' };
 
