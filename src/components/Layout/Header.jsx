@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DarkMap from '../../imgs/map_dark.png';
 
+const bgColor = { background: '#5688e4' };
+
 const Header = ({ numOfLocations, typeOfLocation, region }) => (
-  <div className="card" style={{ background: '#5688e4', borderRadius: 0 }}>
+  <div className="card rounded-0" style={bgColor}>
     <div className="card-body">
       <div className="container">
-        <div className="row" style={{ color: 'var(--bs-body-bg)' }}>
+        <div className="row text-light">
           <div className="col-6 col-md-6">
-            <img src={DarkMap} alt="Rwanda Map" style={{ width: 100 }} />
+            <img src={DarkMap} alt="Rwanda Map" width={100} />
           </div>
           <div className="col-6 col-md-6 align-self-center">
-            <h4 style={{ fontWeight: 'bold' }}>{region}</h4>
+            <h4 className="fw-bold">{region}</h4>
             <h4>
               {`${numOfLocations} ${typeOfLocation}`}
               {' '}

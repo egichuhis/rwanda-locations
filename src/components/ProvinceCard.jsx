@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DarkMap from '../imgs/map_dark.png';
 
+const bgColor = { background: '#3f62a3' };
+
 const ProvinceCard = ({ region, numOfDistricts, onClick }) => {
   const handleCardClick = (event) => {
     if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
@@ -18,29 +20,21 @@ const ProvinceCard = ({ region, numOfDistricts, onClick }) => {
       onKeyDown={handleCardClick}
       aria-label={`Select ${region}`}
     >
-      <div className="card" style={{ background: '#3f62a3', borderRadius: 0 }}>
+      <div className="card rounded-0" style={bgColor}>
         <i
-          className="far fa-arrow-alt-circle-right align-self-end"
-          style={{
-            color: 'var(--bs-body-bg)',
-            paddingTop: 0,
-            marginTop: 5,
-            marginRight: 5,
-            fontSize: 18,
-          }}
+          className="far fa-arrow-alt-circle-right text-light align-self-end mt-1 me-2 fs-5"
         />
         <div className="card-body">
           <div className="container">
             <div
-              className="row flex-column"
-              style={{ color: 'var(--bs-body-bg)' }}
+              className="row flex-column text-light"
             >
               <div className="col-12 col-md-6">
-                <img src={DarkMap} alt="dark map" style={{ width: 100 }} />
+                <img src={DarkMap} alt="dark map" width={100} />
               </div>
-              <div className="col-12 col-md-6" style={{ textAlign: 'right' }}>
-                <h4 style={{ fontWeight: 'bold', fontSize: 18 }}>{region}</h4>
-                <h4 style={{ fontSize: 16 }}>{`${numOfDistricts} Districts`}</h4>
+              <div className="col-12 col-md-6 text-end">
+                <h4 className="fw-bold fs-5">{region}</h4>
+                <h4 className="fs-4">{`${numOfDistricts} Districts`}</h4>
               </div>
             </div>
           </div>

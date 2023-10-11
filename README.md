@@ -13,6 +13,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Website ](#-live-website-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -59,13 +60,19 @@
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE WEBSITE -->
+
+## 🚀 Live Website <a name="live-website"></a>
+
+- [Live Website Link](https://rwanda-locations.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link]()
+- [Live Demo Link](https://www.loom.com/share/9b32188d38bb4ef5877aefb65d68bea8?sid=10c8fe83-01e3-4089-ba00-0f478961e2da)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,8 +151,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Tests using Jest and React Testing Framework**
-- [ ] **Deployment**
+- [ ] **Desktop version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,7 +177,14 @@ If you like this project, give it a ⭐️!
 <!-- ACKNOWLEDGEMENTS -->
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for this opportunity that has enabled me to learn a lot and grow my skills.
+I am deeply grateful to [Microverse](https://www.microverse.org/) for providing me with the opportunity to master HTML/CSS and JavaScript. The well-structured curriculum, supportive mentors, and collaborative projects have transformed me into a proficient web developer.
+
+Thanks also to Nelson Sakwa. for the exceptional web template design, which greatly enhanced this project's visuals. Proper credit is given, respecting the Creative Commons License.
+
+Original Web Template Designed by:
+[Nelson Sakwa](https://www.behance.net/sakwadesignstudio).
+
+[Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
