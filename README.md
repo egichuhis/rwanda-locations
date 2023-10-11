@@ -50,6 +50,9 @@
 <details>
   <summary>Jest & React Testing Framework</summary>
 </details>
+<details>
+  <summary>REST API</summary>
+</details>
 
 <!-- Features -->
 
