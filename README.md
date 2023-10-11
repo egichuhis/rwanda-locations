@@ -13,7 +13,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Live Website ](#-live-website-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -61,11 +61,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Website <a name="live-website"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link]()
+- [Live Website Link](https://rwanda-locations.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
