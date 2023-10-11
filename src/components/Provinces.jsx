@@ -5,6 +5,8 @@ import ProvinceCard from './ProvinceCard';
 import Header from './Layout/Header';
 import { fetchDistricts } from '../redux/features/location/locationSlice';
 
+const bgColor = { background: '#3f62a3' };
+
 const Provinces = () => {
   const { locations, loading, error } = useSelector((state) => state.location);
   const dispatch = useDispatch();
@@ -32,15 +34,8 @@ const Provinces = () => {
     <div>
       <Header numOfLocations={locations.length} typeOfLocation="Provinces" region="Rwanda" />
       <h1
-        style={{
-          fontSize: 15,
-          background: '#34548b',
-          color: 'var(--bs-body-bg)',
-          paddingLeft: 5,
-          paddingBottom: 5,
-          paddingTop: 5,
-          marginBottom: 0,
-        }}
+        className="fs-6 ps-1 pb-1 pt-1 mb-0 text-light"
+        style={bgColor}
       >
         STATS BY PROVINCE
       </h1>
