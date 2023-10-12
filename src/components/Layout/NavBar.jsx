@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-
 import Logo from '../../imgs/rwanda.png';
 
 const NavBar = () => {
@@ -20,7 +19,6 @@ const NavBar = () => {
               src={Logo}
               width={40}
               height={40}
-              style={{ paddingRight: 5 }}
             />
             Rwanda
           </span>

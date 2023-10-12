@@ -34,7 +34,7 @@ const Header = ({
 );
 
 Header.propTypes = {
-  numOfLocations: PropTypes.string.isRequired,
+  numOfLocations: PropTypes.number.isRequired,
   typeOfLocation: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
   handleSearchChange: PropTypes.func.isRequired,

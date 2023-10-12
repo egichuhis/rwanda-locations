@@ -46,7 +46,7 @@ const ProvinceCard = ({ region, numOfDistricts, onClick }) => {
 
 ProvinceCard.propTypes = {
   region: PropTypes.string.isRequired,
-  numOfDistricts: PropTypes.string.isRequired,
+  numOfDistricts: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
