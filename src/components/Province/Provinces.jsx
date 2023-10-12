@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ProvinceCard from './ProvinceCard';
@@ -11,6 +11,18 @@ const Provinces = () => {
   const { locations, loading, error } = useSelector((state) => state.location);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [filteredLocations, setFilteredLocations] = useState(locations);
+
+  const handleSearchChange = (searchText) => {
+    const filteredProvinces = locations.filter((province) => {
+      // Filter provinces that match the search text
+      const provinceName = Object.keys(province)[0];
+      return provinceName.toLowerCase().includes(searchText.toLowerCase());
+    });
+
+    setFilteredLocations(filteredProvinces);
+  };
 
   const handleCardClick = async (region) => {
     dispatch(fetchDistricts(region));
@@ -32,7 +44,7 @@ const Provinces = () => {
 
   return (
     <div>
-      <Header numOfLocations={locations.length} typeOfLocation="Provinces" region="Rwanda" />
+      <Header numOfLocations={locations.length} typeOfLocation="Provinces" region="Rwanda" handleSearchChange={handleSearchChange} />
       <h1
         className="fs-6 ps-1 pb-1 pt-1 mb-0 text-light"
         style={bgColor}
@@ -40,16 +52,18 @@ const Provinces = () => {
         STATS BY PROVINCE
       </h1>
       <div className="row g-0 row-cols-2">
-        {locations.map((location) => (
-          Object.entries(location).map(([region, districts]) => (
+        {filteredLocations.map((province) => {
+          const provinceName = Object.keys(province)[0];
+          const districts = province[provinceName];
+          return (
             <ProvinceCard
-              key={region}
-              region={region}
+              key={provinceName}
+              region={provinceName}
               numOfDistricts={districts.length}
-              onClick={() => handleCardClick(region)}
+              onClick={() => handleCardClick(provinceName)}
             />
-          ))
-        ))}
+          );
+        })}
       </div>
 
     </div>

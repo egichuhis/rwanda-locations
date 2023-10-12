@@ -6,7 +6,9 @@ import Search from './Search';
 
 const bgColor = { background: '#5688e4' };
 
-const Header = ({ numOfLocations, typeOfLocation, region }) => (
+const Header = ({
+  numOfLocations, typeOfLocation, region, handleSearchChange,
+}) => (
   <>
     <NavBar />
     <div className="card rounded-0" style={bgColor}>
@@ -23,7 +25,7 @@ const Header = ({ numOfLocations, typeOfLocation, region }) => (
                 {' '}
               </h4>
             </div>
-            <Search />
+            <Search onSearchChange={handleSearchChange} />
           </div>
         </div>
       </div>
@@ -35,6 +37,7 @@ Header.propTypes = {
   numOfLocations: PropTypes.string.isRequired,
   typeOfLocation: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
+  handleSearchChange: PropTypes.func.isRequired,
 };
 
 export default Header;

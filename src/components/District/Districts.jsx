@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import DistrictCard from './DistrictCard';
@@ -11,6 +11,14 @@ const Districts = () => {
     districts, loading, error,
   } = useSelector((state) => state.location);
   const { region } = useParams();
+
+  const [filteredDistricts, setFilteredDistricts] = useState(districts);
+
+  const handleSearchChange = (searchText) => {
+    const filteredDistrictsList = districts
+      .filter((district) => district.toLowerCase().includes(searchText.toLowerCase()));
+    setFilteredDistricts(filteredDistrictsList);
+  };
 
   if (loading) {
     return <div className="loader-container">Loading...</div>;
@@ -27,12 +35,12 @@ const Districts = () => {
 
   return (
     <div>
-      <Header numOfLocations={districts.length} typeOfLocation="Districts" region={region} />
+      <Header numOfLocations={districts.length} typeOfLocation="Districts" region={region} handleSearchChange={handleSearchChange} />
       <h1 className="fs-6 text-light ps-1 pb-1 pt-1 mb-0" style={bgColor}>
         STATS BY DISTRICTS
       </h1>
       <div className="row g-0" style={bgColor}>
-        {districts.map((district) => (<DistrictCard key={district} district={district} />))}
+        {filteredDistricts.map((district) => (<DistrictCard key={district} district={district} />))}
       </div>
     </div>
   );

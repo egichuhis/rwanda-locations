@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Search = () => (
+const Search = ({ onSearchChange }) => (
   <input
     className="focus-ring"
     type="search"
@@ -8,8 +9,12 @@ const Search = () => (
     name="search"
     autoComplete="on"
     style={{ marginTop: 10 }}
+    onChange={(e) => onSearchChange(e.target.value)}
   />
-
 );
+
+Search.propTypes = {
+  onSearchChange: PropTypes.func.isRequired,
+};
 
 export default Search;
