@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DarkMap from '../../imgs/map_dark.png';
 import NavBar from './NavBar';
+import Search from './Search';
 
 const bgColor = { background: '#5688e4' };
 
@@ -22,6 +23,7 @@ const Header = ({ numOfLocations, typeOfLocation, region }) => (
                 {' '}
               </h4>
             </div>
+            <Search />
           </div>
         </div>
       </div>
