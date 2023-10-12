@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DarkMap from '../imgs/map_dark.png';
+import DarkMap from '../../imgs/map_dark.png';
 
 const bgColor = { background: '#3f62a3' };
 
@@ -46,7 +46,7 @@ const ProvinceCard = ({ region, numOfDistricts, onClick }) => {
 
 ProvinceCard.propTypes = {
   region: PropTypes.string.isRequired,
-  numOfDistricts: PropTypes.string.isRequired,
+  numOfDistricts: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
