@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import DistrictCard from './DistrictCard';
@@ -12,7 +12,13 @@ const Districts = () => {
   } = useSelector((state) => state.location);
   const { region } = useParams();
 
-  const [filteredDistricts, setFilteredDistricts] = useState(districts);
+  const [filteredDistricts, setFilteredDistricts] = useState([]);
+
+  useEffect(() => {
+    if (!loading && !error) {
+      setFilteredDistricts(districts);
+    }
+  }, [loading, error, districts]);
 
   const handleSearchChange = (searchText) => {
     const filteredDistrictsList = districts

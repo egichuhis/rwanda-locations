@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ProvinceCard from './ProvinceCard';
@@ -12,11 +12,16 @@ const Provinces = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [filteredLocations, setFilteredLocations] = useState(locations);
+  const [filteredLocations, setFilteredLocations] = useState([]);
+
+  useEffect(() => {
+    if (!loading && !error) {
+      setFilteredLocations(locations);
+    }
+  }, [loading, error, locations]);
 
   const handleSearchChange = (searchText) => {
     const filteredProvinces = locations.filter((province) => {
-      // Filter provinces that match the search text
       const provinceName = Object.keys(province)[0];
       return provinceName.toLowerCase().includes(searchText.toLowerCase());
     });
